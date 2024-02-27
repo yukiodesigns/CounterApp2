@@ -3,7 +3,7 @@ package com.example.counterapp
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class CounterViewModel:ViewModel() {
+class MainActivityViewModel:ViewModel() {
 
     var counter = MutableLiveData<Int>()
 

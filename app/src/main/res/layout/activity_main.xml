@@ -3,10 +3,18 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout
+
+    <data>
+        <variable
+            name="myViewModel"
+            type="com.example.counterapp.MainActivityViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/textView"
@@ -26,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="136dp"
         android:text="Click Me"
+        android:onClick="@{() -> myViewModel.updateCount()}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
